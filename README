@@ -1,3 +1,27 @@
 zeroth line from water
 First line
 add sugar
+
+Resolving merge conflicts with git and kdiff3
+
+By Jeroen on Tuesday 26 August 2008, 12:44 - Permalink
+
+    * git
+
+A little bit confusing to get started, but in the end quite simple. To get started, the easiest is to put the kdiff3 folder in your path.
+
+Assume you're on branch 'master' and want to merge changes from 'master' to 'working'
+
+C:\Projects\GitTest>git checkout working
+C:\Projects\GitTest>git merge master
+Auto-merged blabla.txt
+CONFLICT (content): Merge conflict in blabla.txt
+Automatic merge failed; fix conflicts and then commit the result.
+
+To fix the conflicts using kdiff3, first you need to tweak the kdiff3 configuration a bit: start kdiff3, and go to Settings, Configure KDiff3, Integration. Under 'Command line options to ignore', add ';--'. To resolve conflicts, you can now use:
+
+git mergetool -t kdiff3
+
+To permanently configure kdiff3 as the merge tool (so you don't need to specify the '-t kdiff3' anymore):
+
+git config merge.tool kdiff3
