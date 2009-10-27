@@ -25,3 +25,4 @@ git mergetool -t kdiff3
 To permanently configure kdiff3 as the merge tool (so you don't need to specify the '-t kdiff3' anymore):
 
 git config merge.tool kdiff3
+something at the end
