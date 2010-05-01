@@ -1,1 +1,3 @@
 advantages of di are:
+
+separate config from use
