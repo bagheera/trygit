@@ -1,3 +1,4 @@
 attribs vs. elements
 sdkafjlksadj
 xml angle brackets <>
+line from branch foo
