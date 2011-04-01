@@ -2,3 +2,4 @@ advantages of di are:
 
 separate config from use
 testability
+make dep explicit
